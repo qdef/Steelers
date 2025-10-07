@@ -1,0 +1,53 @@
+# ============================
+# Fichiers de base Python
+# ============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ============================
+# Environnements virtuels
+# ============================
+venv/
+env/
+.venv/
+ENV/
+
+# ============================
+# Fichiers temporaires / logs
+# ============================
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+*.db
+
+# ============================
+# Config / secrets
+# ============================
+*.env
+.env.*
+/config/local_settings.py
+
+# ============================
+# IDE / OS spécifiques
+# ============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ============================
+# Build / coverage / tests
+# ============================
+/build/
+/dist/
+/coverage/
+/htmlcov/
+*.egg-info
+.tox/
+.pytest_cache/
+
