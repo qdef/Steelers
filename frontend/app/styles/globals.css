@@ -1,0 +1,570 @@
+/* 1. Fonts */
+
+@plugin "tailwindcss-animate";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffffff;
+}
+
+body > main {
+  flex: 1;
+}
+
+.toast-black-and-gold {
+  color: gold;
+  background-color: black;
+}
+
+.font-steelers {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+.banner-frame {
+  width: 100%;
+  text-align: center;
+  background-color: #FFB612 ;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.banner-text {
+  color: white;
+  font-size: clamp(1rem, 4vw, 3rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 
+    0 0 5px rgba(0,0,0,1),
+    0 0 5px rgba(0,0,0,0.8),
+    0 0 5px rgba(0,0,0,0.6),
+    0 0 5px rgba(0,0,0,0.6);
+}
+
+.navbar-frame {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-group {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar-text {
+  color: white;
+  background-color: "black";
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar-text:hover {
+  color: #FFB612 ;
+}
+
+.navbar-cart {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: white;
+  background-color: "black";
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar-cart:hover {
+  color: #FFB612 ;
+}
+
+.white-shadow-title{
+  color: white;
+  padding-top: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 
+    0 0 5px rgba(0,0,0,1),
+    0 0 5px rgba(0,0,0,0.8),
+    0 0 5px rgba(0,0,0,0.6);
+}
+
+.stadium-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background-image: url('/images/schedule_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HOME PAGE ELEMENTS */
+
+.home-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* SCHEDULE PAGE ELEMENTS */
+
+.schedule-overlay {
+  background-color: rgba(0, 0, 0, 0.05);
+  min-height: 100vh;
+}
+
+.game-card {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 0.7rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  background-color: #FFB612;
+  border: 2px solid black;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7);
+}
+
+.game-card-title {
+  color: white;
+  font-size: clamp(1rem, 4vw, 3rem);
+  padding-left: 30px;
+  padding-right: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 
+    0 0 5px rgba(0,0,0,1),
+    0 0 5px rgba(0,0,0,0.8),
+    0 0 5px rgba(0,0,0,0.6);
+  margin-bottom: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .game-card-title {
+    font-size: 1.875rem;
+  }
+}
+
+.game-card-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-card-availability {
+  font-size: 1.2rem;
+  font-weight: semibold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.ticket-date {
+  font-size: 1.2rem;
+  font-weight: semibold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+
+.ticket-price {
+  font-size: 1.2rem;
+  font-weight: semibold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* BOOKING PAGE ELEMENTS */
+
+.ticket-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ticket-category {
+  width: 500px;
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ticket-quantity {
+  width: 150px;
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.total-amount {
+  width: 150px;
+  padding: 0.7rem 1rem;
+  border: 2px solid black;
+  background: #E9E9ED;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cart-button {
+  width: 150px;
+  padding: 0.7rem 1rem;
+  background: #ffd812ff;
+  border: 2px solid black;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+.cart-button:hover {
+  background: #ffc812ff;
+}
+
+.modal-content {
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.modal-button {
+  width: 10rem;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* CART PAGE ELEMENTS */
+
+.cart-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.cart-item {
+  width: 30rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 0.7rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  background-color: #FFB612;
+  border: 2px solid black;
+  line-height: 0.8;
+}
+
+.empty-cart-button {
+  padding: 1rem 1.2rem;
+  background-color: #ff6512ff;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  font-size: 1.2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.empty-cart-button:hover {
+  background-color: #ff2212ff;
+}
+
+.checkout-button {
+  padding: 1.5rem 2rem;
+  background-color: #3b6bfaff;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1.2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.checkout-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+/* PAYMENT ELEMENTS */
+
+.payment-frame {
+  width: 300px;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0.7rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  line-height: 0.5;
+}
+
+.payment-item {
+  width: 200px;
+  padding: 0.7rem 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* SCROLL BAR SETTINGS FOR VARIOUS BROWSERS */
+
+/* --- Chrome, Edge, Safari --- */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090808ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFB612;
+  border-radius: 6px;
+  border: 2px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(183, 255, 0, 1);
+}
+
+/* --- Firefox --- */
+* {
+  scrollbar-color: #FFB612 #111010ff;
+}
+
+.footer-frame {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #000000ff ;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.footer-text {
+  color: #FFB612;
+  font-size: clamp(0.5rem, 4vw, 1.3rem);
+  font-weight: lighter;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
