@@ -1,0 +1,14 @@
+GET http://localhost:8000/api/games
+Content-Type: application/json
+
+###
+
+GET http://localhost:8000/api/orders
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8000/api/orders/9ea2af89-b1a8-472f-a2bc-48b86b8a896d/
+
+
+

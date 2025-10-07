@@ -1,0 +1,78 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("background.jpg");
+	background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_card {
+    width: 400px;
+    background: rgba(26,26,26,0.85);
+    border: 2px solid #FFB612;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    color: #ffffff;
+    margin-bottom: 3rem;
+}
+
+#form-title {
+    color: #FFB612;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.login_btn {
+    width: 90%;
+    background: #FFB612 !important;
+    color: #000000 !important;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.register_btn {
+    width: 90%;
+    background: #000000 !important;
+    color: #FFB612 !important;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.input-group-text {
+    background: #FFB612 !important;
+    color: #000 !important;
+    border: 0 !important;
+}
+
+.form-control {
+    background: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+.form-control:focus {
+    border: 1px solid #FFB612;
+    box-shadow: none;
+    outline: none;
+}
+
+a {
+    color: #FFB612;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
